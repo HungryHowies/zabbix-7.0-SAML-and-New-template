@@ -4,91 +4,68 @@
  ```
 root@zabbix:/etc/zabbix# history
     1  clear
-    2  cd /tmp/
-    3  wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_7.0-1+ubuntu22.04_all.deb
-    4  ls
-    5  dpkg -i zabbix-release_7.0-1+ubuntu22.04_all.deb
-    6  apt update
-    7  apt install zabbix-server-mysql zabbix-frontend-php zabbix-nginx-conf zabbix-sql-scripts zabbix-agent
-    8  apt install mysql-server
-    9  mysql -uroot -p
-   10  zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -p zabbix
-   11  mysql -uroot -p
-   12  vi /etc/zabbix/zabbix_server.conf
-   13  vi ~/.vimrc
-   14  vi /etc/zabbix/zabbix_server.conf
-   15  cd /etc/zabbix
-   16  openssl req -newkey rsa:4096 -x509 -sha256 -days 3650 -nodes -out 192.168.200.103.crt -keyout 192.168.200.103.key
-   17  vi /etc/zabbix/nginx.conf
-   18  nginx -t
-   19  systemctl restart zabbix-server zabbix-agent nginx php8.1-fpm
-   20  systemctl enable zabbix-server zabbix-agent nginx php8.1-fpm
-   21  systemctl restart nginx
-   22  clear
-   23  cat /etc/lsb-release
-   24  apt update && apt upgrade
-   25  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-   26  dpkg -i google-chrome-stable_current_amd64.deb
-   27  sudo apt -f install
-   28  dpkg -i google-chrome-stable_current_amd64.deb
-   29  google-chrome --version
-   30  pip3 install selenium
-   31  apt install python3-pip
-   32  pip3 install webdriver-manager
-   33  vim test.py
-   34  python3 test.py
-   35  pip3 test.py
-   36  ls
-   37  python3 test.py
-   38  vi test.py
-   39  sudo pip3 install selenium
-   40  python3 test.py
-   41  vi zabbix_server.conf
-   42  systemctl restart zabbix-server
-   43  echo $JAVA_HOME
-   44  which java
-   45  update-alternatives --config java
-   46  java --version
-   47  apt install openjdk-18-jre-headless
-   48  java --version
-   49  update-alternatives --config java
-   50  export JAVA_HOME=/usr/lib/jvm/java-18-openjdk-amd64/
-   51  echo $JAVA_HOME
-   52  systemctl restart zabbix-server
-   53  webdriver-manager start
-   54  node webdriver-manager start
-   55  apt install nodejs
-   56  node webdriver-manager start
-   57  updatedb
-   58  apt install plocate
-   59  locate webdriver-manager
-   60  node webdriver-manager start
-   61  locate webdriver
-   62  webdriver --start
-   63  cd /usr/local/lib/python3.10/dist-packages/
-   64  node webdriver-manager start
-   65  webdriver-manager start
-   66  locate node_modules
-   67  cd ../../../../
-   68  webdriver-manager updat
-   69  pip3 webdriver-manager start
-   70  pip3 webdriver-manager
-   71  pip3 install webdriver-manager
-   72  pip list
-   73  webdriver-manager update --ignore_ssl --proxy
-   74  apt install npm
-   75  npm install webdriver-manager
-   76  webdriver-manager start
-   77  npm update
-   78  npm audit
-   79  vi  /root/.npm/_logs/2024-06-11T01_29_55_154Z-debug-0.log
-   80  sudo npm install -g npm@7.7.0
-   81  clear
-   82  webdriver-manager start
-   83  npm install -g webdriver-manager
-   84  webdriver-manager update
-   85  webdriver-manager start
-   86  cd /etc/zabbix/
-   87  vi zabbix_server.conf
-   88  webdriver-manager start
+    2  wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_7.0-1+ubuntu22.04_all.deb
+    3  dpkg -i zabbix-release_7.0-1+ubuntu22.04_all.deb
+    4  apt update
+    5  apt install zabbix-server-mysql zabbix-frontend-php zabbix-nginx-conf zabbix-sql-scripts zabbix-agent
+    6  apt install mysql-server
+    7  systemctl start mysql.service
+    8  mysql -uroot -p
+    9  zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -p zabbix
+   10  mysql -uroot -p
+   11  vi /etc/zabbix/zabbix_server.conf
+   12  vi ~/.vimrc
+   13  vi /etc/zabbix/zabbix_server.conf
+   14  cd /etc/zabbix
+   15  openssl req -newkey rsa:4096 -x509 -sha256 -days 3650 -nodes -out 192.168.200.103.crt -keyout 192.168.200.103.key
+   16  vi /etc/zabbix/nginx.conf
+   17  nginx -t
+   18  systemctl restart zabbix-server zabbix-agent nginx php8.1-fpm
+   19  systemctl enable zabbix-server zabbix-agent nginx php8.1-fpm
+   20  clear
+   21  dnf -y update
+   22  apt install dnf
+   23  dnf -y install podman podman-compose
+   24  apt update
+   25  apt install podman podman-compose
+   26  sudo apt install -y podman
+   27  pip3 install podman-compose
+   28  apt install python3-pip
+   29  pip3 install podman-compose
+   30  wget https://raw.githubusercontent.com/SeleniumHQ/docker-selenium/trunk/docker-compose-v3-full-grid.yml -O docker-compose.yml
+   31  ls
+   32  podman-compose up -d
+   33  podman ps
+   34  podman network create -d bridge test-net
+   35  podman network ls
+   36  podman-compose up -d
+   37  ls /etc/cni/net.d/test-net.conflist
+   38  wget http://archive.ubuntu.com/ubuntu/pool/universe/g/golang-github-containernetworking-plugins/containernetworking-plugins_1.1.1+ds1-3_amd64.deb
+   39  ls
+   40  history
+   41  ls
+   42  dpkg -i containernetworking-plugins_1.1.1+ds1-3_amd64.deb
+   43  podman-compose up -d
+   44  podman ps
+   45  ls
+   46  wget https://raw.githubusercontent.com/SeleniumHQ/docker-selenium/trunk/docker-compose-v3-full-grid.yml -O docker-compose.yml
+   47  ls
+   48  vi docker-compose.yml
+   49  podman-compose up -d
+   50  podman compose --file compose.yaml up --detach
+   51  ls
+   52  podman compose --file docker-compose.yml up --detach
+   53  podman compose -f docker-compose.yml up --detach
+   54  docker-compose  -f docker-compose.yml up --detach
+   55  apt  install docker-compose
+   56  docker-compose  -f docker-compose.yml up
+   57  docker-compose up -d
+   58  podman ps
+   59  dpcker-compose ps
+   60  docker-compose ps
+   61  vi zabbix_server.conf
+   62  systemctl restart zabbix-server
+   63  history
+
+
 ```
