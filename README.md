@@ -35,13 +35,12 @@ http://archive.ubuntu.com/ubuntu/pool/universe/g/golang-github-containernetworki
 apt install podman 
 pip3 install podman-compose
 apt install python3-pip
-pip3 install podman-compose
 wget https://raw.githubusercontent.com/SeleniumHQ/docker-selenium/trunk/docker-compose-v3-full-grid.yml -O docker-compose.yml
 wget http://archive.ubuntu.com/ubuntu/pool/universe/g/golang-github-containernetworking-plugins/containernetworking-plugins_1.1.1+ds1-3_amd64.deb
 dpkg -i containernetworking-plugins_1.1.1+ds1-3_amd64.deb
 apt install docker-compose
-docker-compose  -f docker-compose.yml up
-docker-compose up -d
+docker-compose  -f docker-compose.yml up -d
+# docker-compose up -d
 dpcker-compose ps  
 vi zabbix_server.conf
 systemctl restart zabbix-server
