@@ -1,6 +1,7 @@
 # zabbix7
 
  Installation  steps
+ 
  ```
 root@zabbix:/etc/zabbix# history
 wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_7.0-1+ubuntu22.04_all.deb
@@ -21,6 +22,11 @@ vi /etc/zabbix/nginx.conf
 nginx -t
 systemctl restart zabbix-server zabbix-agent nginx php8.1-fpm
 systemctl enable zabbix-server zabbix-agent nginx php8.1-fpm
+```
+
+Installation for  Website by Browser
+NOTE: https://www.initmax.com/wiki/installation-and-basic-usage-of-browser-item/
+```
 apt install podman 
 pip3 install podman-compose
 apt install python3-pip
