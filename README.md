@@ -25,7 +25,9 @@ systemctl enable zabbix-server zabbix-agent nginx php8.1-fpm
 ```
 
 Installation for  Website by Browser
+
 NOTE: 
+
 https://www.initmax.com/wiki/installation-and-basic-usage-of-browser-item/
 http://archive.ubuntu.com/ubuntu/pool/universe/g/golang-github-containernetworking-plugins/
 
