@@ -1,4 +1,4 @@
-# zabbix7
+# zabbix-7.0
 
  Installation  steps
  
