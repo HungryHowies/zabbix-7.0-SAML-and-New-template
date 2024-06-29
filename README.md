@@ -32,16 +32,36 @@ https://www.initmax.com/wiki/installation-and-basic-usage-of-browser-item/
 http://archive.ubuntu.com/ubuntu/pool/universe/g/golang-github-containernetworking-plugins/
 
 ```
-apt install podman 
+apt install podman
+```
+```
 pip3 install podman-compose
+```
+```
 apt install python3-pip
+```
+```
 wget https://raw.githubusercontent.com/SeleniumHQ/docker-selenium/trunk/docker-compose-v3-full-grid.yml -O docker-compose.yml
+```
+```
 wget http://archive.ubuntu.com/ubuntu/pool/universe/g/golang-github-containernetworking-plugins/containernetworking-plugins_1.1.1+ds1-3_amd64.deb
+```
+```
 dpkg -i containernetworking-plugins_1.1.1+ds1-3_amd64.deb
+```
+```
 apt install docker-compose
+```
+```
 docker-compose  -f docker-compose.yml up -d
+```
 # docker-compose up -d
+```
 dpcker-compose ps  
+```
+```
 vi zabbix_server.conf
+```
+```
 systemctl restart zabbix-server
 ```
